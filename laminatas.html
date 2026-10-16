@@ -4,41 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laminato skaičiuoklė</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
 
-    <h1>Laminato skaičiuoklė</h1>
+    <div class="header">Laminato skaičiuoklė</div>
 
-    <div class="calc-box">
+    <div class="menu">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Pagrindinis</a>
+        <a href="laminatas.html"><i class="fa-solid fa-ruler-combined"></i> Laminatas</a>
+        <a href="plyteles.html"><i class="fa-solid fa-border-all"></i> Plytelės</a>
+        <a href="dazai.html"><i class="fa-solid fa-paint-roller"></i> Dažai</a>
+        <a href="gipsas.html"><i class="fa-solid fa-drafting-compass"></i> Gipsas</a>
+    </div>
+
+    <div class="calc">
         <label>Kambario plotas (m²):</label>
-        <input type="number" id="plotas">
+        <input id="plotas" type="number">
 
         <label>Pakuotės plotas (m²):</label>
-        <input type="number" id="pakPlotas">
+        <input id="pakuote" type="number">
 
         <label>Pakuotės kaina (€):</label>
-        <input type="number" id="pakKaina">
+        <input id="kaina" type="number">
 
-        <button onclick="skaiciuoti()">Skaičiuoti</button>
+        <button onclick="calcLaminatas()">Skaičiuoti</button>
 
         <p id="rezultatas"></p>
     </div>
-
-    <script>
-        function skaiciuoti() {
-            let plotas = Number(document.getElementById("plotas").value);
-            let pakPlotas = Number(document.getElementById("pakPlotas").value);
-            let pakKaina = Number(document.getElementById("pakKaina").value);
-
-            let reikalinga = Math.ceil(plotas / pakPlotas);
-            let suma = reikalinga * pakKaina;
-
-            document.getElementById("rezultatas").innerText =
-                "Reikės pakuočių: " + reikalinga +
-                " | Bendra kaina: " + suma.toFixed(2) + " €";
-        }
-    </script>
 
 </body>
 </html>
