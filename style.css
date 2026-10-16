@@ -34,4 +34,8 @@ nav a {
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 6px;
+}.menu a i {
+    margin-right: 8px;
+    font-size: 18px;
 }
+
