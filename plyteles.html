@@ -2,42 +2,36 @@
 <html lang="lt">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plytelių skaičiuoklė</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header><h1>Meistrų skaičiuoklės</h1></header>
+    <h1>Plytelių skaičiuoklė</h1>
 
-<nav>
-    <a href="index.html">Pagrindinis</a>
-    <a href="laminatas.html">Laminatas</a>
-    <a href="plyteles.html">Plytelės</a>
-    <a href="dazai.html">Dažai</a>
-    <a href="gipsas.html">Gipsas</a>
-</nav>
-
-<div class="main">
-    <div class="card">
-        <h2>Plytelių skaičiuoklė</h2>
-
+    <div class="calc-box">
         <label>Plotas (m²):</label>
-        <input id="ply_plotas" type="number" value="10">
+        <input type="number" id="plotas">
 
-        <label>Plytelės ilgis (cm):</label>
-        <input id="ply_ilgis" type="number" value="30">
+        <label>Plytelių kaina už m² (€):</label>
+        <input type="number" id="kaina">
 
-        <label>Plytelės plotis (cm):</label>
-        <input id="ply_plotis" type="number" value="60">
+        <button onclick="skaiciuoti()">Skaičiuoti</button>
 
-        <label>Atsarga (%):</label>
-        <input id="ply_atsarga" type="number" value="10">
-
-        <button onclick="skaiciuotiPlyteles()">Skaičiuoti</button>
-        <div id="ply_rez" class="result"></div>
+        <p id="rezultatas"></p>
     </div>
-</div>
 
-<script src="script.js"></script>
+    <script>
+        function skaiciuoti() {
+            let plotas = Number(document.getElementById("plotas").value);
+            let kaina = Number(document.getElementById("kaina").value);
+            let suma = plotas * kaina;
+
+            document.getElementById("rezultatas").innerText =
+                "Bendra kaina: " + suma.toFixed(2) + " €";
+        }
+    </script>
+
 </body>
 </html>
