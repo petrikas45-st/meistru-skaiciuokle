@@ -5,188 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meistrų skaičiuoklės</title>
 
-    <!-- SEO -->
-    <meta name="description" content="Profesionalios statybų skaičiuoklės: laminatas, plytelės, dažai, gipsas ir daugiau.">
-    <meta property="og:title" content="Meistrų skaičiuoklės">
-    <meta property="og:description" content="Statybų skaičiuoklių platforma meistrams ir klientams.">
-    <meta property="og:type" content="website">
-     </head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Ikonos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- Stilius -->
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background: #ffffff;
-            color: #222;
+            margin: 0;
+            background: #f5f5f5;
         }
 
-        /* ORANŽINIS BRANDO BLOKAS */
-        .brand-bar {
-            background: #FF7A00;
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo {
-            width: 48px;
-            height: 48px;
-            background: #fff;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #FF7A00;
-            font-size: 22px;
-        }
-
-        .brand-title {
-            font-size: 22px;
-            font-weight: bold;
-            color: #fff;
-        }
-
-        /* MĖLYNA NAVIGACIJA */
-        .nav-bar {
-            background: #0077FF;
-            padding: 10px 20px;
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-bar a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .nav-bar a:hover {
-            opacity: 0.7;
-        }
-
-        /* GRID */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            padding: 30px;
-        }
-
-        .card {
-            background: #f7f7f7;
-            border-radius: 10px;
+        .header {
+            background: #ff7f00;
             padding: 20px;
             text-align: center;
-            font-size: 18px;
+            color: white;
+            font-size: 24px;
             font-weight: bold;
-            border: 2px solid #eee;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .menu a {
+            background: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
             transition: 0.2s;
         }
 
-        .card:hover {
-            border-color: #0077FF;
-            transform: translateY(-3px);
+        .menu a:hover {
+            background: #ffe0c2;
         }
 
-        .card-icon {
-            font-size: 40px;
-            margin-bottom: 10px;
-            color: #FF7A00;
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #777;
-            font-size: 14px;
-        }
-
-        /* MOBILE */
-        @media (max-width: 600px) {
-            .brand-title {
-                font-size: 18px;
-            }
-            .nav-bar {
-                flex-wrap: wrap;
-            }
+        .menu a i {
+            margin-right: 10px;
+            font-size: 22px;
+            color: #ff7f00;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- ORANŽINIS BRANDO BLOKAS -->
-    <div class="brand-bar">
-        <div class="logo">▦</div>
-        <div class="brand-title">Meistrų skaičiuoklės</div>
+    <div class="header">Meistrų skaičiuoklės</div>
+
+    <div class="menu">
+        <a href="laminatas.html"><i class="fa-solid fa-ruler-combined"></i> Laminato skaičiuoklė</a>
+        <a href="plyteles.html"><i class="fa-solid fa-border-all"></i> Plytelių skaičiuoklė</a>
+        <a href="dazai.html"><i class="fa-solid fa-paint-roller"></i> Dažų skaičiuoklė</a>
+        <a href="gipsas.html"><i class="fa-solid fa-drafting-compass"></i> Gipskartonio skaičiuoklė</a>
     </div>
-
-    <!-- MĖLYNA NAVIGACIJA -->
-    <div class="nav-bar">
-        <a href="#">Pagrindinis</a>
-        <a href="#">Laminatas</a>
-        <a href="#">Plytelės</a>
-        <a href="#">Dažai</a>
-        <a href="#">Gipsas</a>
-    </div>
-
-    <!-- GRID -->
-    <div class="grid">
-
-        <!-- REALIOS 4 SKAIČIUOKLĖS -->
-        <div class="card">
-            <div class="card-icon">📏</div>
-            Laminato skaičiuoklė
-        </div>
-
-        <div class="card">
-            <div class="card-icon">▦</div>
-            Plytelių skaičiuoklė
-        </div>
-
-        <div class="card">
-            <div class="card-icon">🎨</div>
-            Dažų skaičiuoklė
-        </div>
-
-        <div class="card">
-            <div class="card-icon">📐</div>
-            Gipskartonio skaičiuoklė
-        </div>
-
-        <!-- 4 TUŠČIOS KORTELĖS ATEIČIAI -->
-        <div class="card">
-            <div class="card-icon">🧱</div>
-            Grindjuostės (ateityje)
-        </div>
-
-        <div class="card">
-            <div class="card-icon">📦</div>
-            Medžiagų kaina (ateityje)
-        </div>
-
-        <div class="card">
-            <div class="card-icon">📏</div>
-            Sienų plotas (ateityje)
-        </div>
-
-        <div class="card">
-            <div class="card-icon">🛠️</div>
-            Meistrų įrankiai (ateityje)
-        </div>
-
-    </div>
-
-    <footer>
-        © 2026 Meistrų skaičiuoklės – Statybų skaičiuoklių platforma
-    </footer>
 
 </body>
-</html><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+</html>
