@@ -1,4 +1,3 @@
-
 function calcLaminatas() {
     let plotas = parseFloat(document.getElementById("plotas").value);
     let pakuote = parseFloat(document.getElementById("pakuote").value);
@@ -52,5 +51,21 @@ function calcGipsas() {
 
         document.getElementById("rezultatas").innerText =
             "Reikės " + kiekis + " lapų. Kaina: " + suma.toFixed(2) + " €";
+    }
+}
+
+/* --- KLIENTŲ FORMOS FUNKCIJA --- */
+
+function siustiUzklausa() {
+    let vardas = document.getElementById("vardas").value;
+    let tel = document.getElementById("tel").value;
+    let uzklausa = document.getElementById("uzklausa").value;
+
+    if (vardas && tel && uzklausa) {
+        document.getElementById("form-rez").innerText =
+            "Ačiū! Susisieksime su jumis per 10–30 min.";
+    } else {
+        document.getElementById("form-rez").innerText =
+            "Užpildykite visus laukus.";
     }
 }
