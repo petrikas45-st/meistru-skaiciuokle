@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Plytelių skaičiuoklė</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Meistrų skaičiuoklės</h1></header>
+
+<nav>
+    <a href="index.html">Pagrindinis</a>
+    <a href="laminatas.html">Laminatas</a>
+    <a href="plyteles.html">Plytelės</a>
+    <a href="dazai.html">Dažai</a>
+    <a href="gipsas.html">Gipsas</a>
+</nav>
+
+<div class="main">
+    <div class="card">
+        <h2>Plytelių skaičiuoklė</h2>
+
+        <label>Plotas (m²):</label>
+        <input id="ply_plotas" type="number" value="10">
+
+        <label>Plytelės ilgis (cm):</label>
+        <input id="ply_ilgis" type="number" value="30">
+
+        <label>Plytelės plotis (cm):</label>
+        <input id="ply_plotis" type="number" value="60">
+
+        <label>Atsarga (%):</label>
+        <input id="ply_atsarga" type="number" value="10">
+
+        <button onclick="skaiciuotiPlyteles()">Skaičiuoti</button>
+        <div id="ply_rez" class="result"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

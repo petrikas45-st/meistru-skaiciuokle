@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Dažų skaičiuoklė</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Meistrų skaičiuoklės</h1></header>
+
+<nav>
+    <a href="index.html">Pagrindinis</a>
+    <a href="laminatas.html">Laminatas</a>
+    <a href="plyteles.html">Plytelės</a>
+    <a href="dazai.html">Dažai</a>
+    <a href="gipsas.html">Gipsas</a>
+</nav>
+
+<div class="main">
+    <div class="card">
+        <h2>Dažų skaičiuoklė</h2>
+
+        <label>Plotas (m²):</label>
+        <input id="daz_plotas" type="number" value="30">
+
+        <label>Sąnaudos (l/m²):</label>
+        <input id="daz_sanaudos" type="number" value="0.1">
+
+        <label>Atsarga (%):</label>
+        <input id="daz_atsarga" type="number" value="10">
+
+        <button onclick="skaiciuotiDazus()">Skaičiuoti</button>
+        <div id="daz_rez" class="result"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
