@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="lt">
 <head>
     <meta charset="UTF-8">
@@ -39,8 +39,27 @@
         <a class="buy-btn" href="https://www.varle.lt/?utm_source=meistru_skaiciuokle" target="_blank">
             <i class="fa-solid fa-cart-shopping"></i> Pirkti medžiagas
         </a>
+
+        <!-- AUTOMATINĖ KLIENTŲ FORMA -->
+        <div class="contact-form">
+            <h3>Greita užklausa</h3>
+
+            <label>Vardas:</label>
+            <input id="vardas" type="text">
+
+            <label>Telefono numeris:</label>
+            <input id="tel" type="text">
+
+            <label>Ką reikia padaryti?</label>
+            <textarea id="uzklausa"></textarea>
+
+            <button onclick="siustiUzklausa()">Siųsti užklausą</button>
+
+            <p id="form-rez"></p>
+        </div>
+        <!-- FORMOS PABAIGA -->
+
     </div>
 
 </body>
 </html>
-  
