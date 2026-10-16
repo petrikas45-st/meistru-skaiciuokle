@@ -1,41 +1,55 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f3f3f3;
-    margin: 0;
-    padding: 0;
+function calcLaminatas() {
+    let plotas = parseFloat(document.getElementById("plotas").value);
+    let pakuote = parseFloat(document.getElementById("pakuote").value);
+    let kaina = parseFloat(document.getElementById("kaina").value);
+
+    if (plotas > 0 && pakuote > 0 && kaina > 0) {
+        let kiekis = Math.ceil(plotas / pakuote);
+        let suma = kiekis * kaina;
+
+        document.getElementById("rezultatas").innerText =
+            "Reikės " + kiekis + " pakuočių. Kaina: " + suma.toFixed(2) + " €";
+    }
 }
 
-header {
-    background: #222;
-    color: #fff;
-    padding: 15px 20px;
+function calcPlyteles() {
+    let plotas = parseFloat(document.getElementById("plotas").value);
+    let deze = parseFloat(document.getElementById("deze").value);
+    let kaina = parseFloat(document.getElementById("kaina").value);
+
+    if (plotas > 0 && deze > 0 && kaina > 0) {
+        let kiekis = Math.ceil(plotas / deze);
+        let suma = kiekis * kaina;
+
+        document.getElementById("rezultatas").innerText =
+            "Reikės " + kiekis + " dėžių. Kaina: " + suma.toFixed(2) + " €";
+    }
 }
 
-nav {
-    background: #333;
-    padding: 10px 20px;
+function calcDazai() {
+    let plotas = parseFloat(document.getElementById("plotas").value);
+    let iseiga = parseFloat(document.getElementById("iseiga").value);
+    let kaina = parseFloat(document.getElementById("kaina").value);
+
+    if (plotas > 0 && iseiga > 0 && kaina > 0) {
+        let litrai = plotas / iseiga;
+        let suma = litrai * kaina;
+
+        document.getElementById("rezultatas").innerText =
+            "Reikės " + litrai.toFixed(1) + " litrų. Kaina: " + suma.toFixed(2) + " €";
+    }
 }
 
-nav a {
-    color: #fff;
-    margin-right: 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
+function calcGipsas() {
+    let plotas = parseFloat(document.getElementById("plotas").value);
+    let lapas = parseFloat(document.getElementById("lapas").value);
+    let kaina = parseFloat(document.getElementById("kaina").value);
 
-.main {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 10px;
-}
+    if (plotas > 0 && lapas > 0 && kaina > 0) {
+        let kiekis = Math.ceil(plotas / lapas);
+        let suma = kiekis * kaina;
 
-.card {
-    background: #fff;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-}.menu a i {
-    margin-right: 8px;
-    font-size: 18px;
+        document.getElementById("rezultatas").innerText =
+            "Reikės " + kiekis + " lapų. Kaina: " + suma.toFixed(2) + " €";
+    }
 }
-
