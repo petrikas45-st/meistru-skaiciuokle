@@ -1,49 +1,56 @@
-function skaiciuotiLaminata() {
-    const plotas = parseFloat(document.getElementById('lam_plotas').value);
-    const pakuote = parseFloat(document.getElementById('lam_pakuote').value);
-    const atsarga = parseFloat(document.getElementById('lam_atsarga').value);
 
-    const kiekis = plotas / pakuote;
-    const suAtsarga = kiekis * (1 + atsarga / 100);
+function calcLaminatas() {
+    let plotas = parseFloat(document.getElementById("plotas").value);
+    let pakuote = parseFloat(document.getElementById("pakuote").value);
+    let kaina = parseFloat(document.getElementById("kaina").value);
 
-    document.getElementById('lam_rez').innerText =
-        'Reikės pakuočių: ' + Math.ceil(suAtsarga);
+    if (plotas > 0 && pakuote > 0 && kaina > 0) {
+        let kiekis = Math.ceil(plotas / pakuote);
+        let suma = kiekis * kaina;
+
+        document.getElementById("rezultatas").innerText =
+            "Reikės " + kiekis + " pakuočių. Kaina: " + suma.toFixed(2) + " €";
+    }
 }
 
-function skaiciuotiDazus() {
-    const plotas = parseFloat(document.getElementById('daz_plotas').value);
-    const sanaudos = parseFloat(document.getElementById('daz_sanaudos').value);
-    const atsarga = parseFloat(document.getElementById('daz_atsarga').value);
+function calcPlyteles() {
+    let plotas = parseFloat(document.getElementById("plotas").value);
+    let deze = parseFloat(document.getElementById("deze").value);
+    let kaina = parseFloat(document.getElementById("kaina").value);
 
-    const kiekis = plotas * sanaudos;
-    const suAtsarga = kiekis * (1 + atsarga / 100);
+    if (plotas > 0 && deze > 0 && kaina > 0) {
+        let kiekis = Math.ceil(plotas / deze);
+        let suma = kiekis * kaina;
 
-    document.getElementById('daz_rez').innerText =
-        'Reikės dažų: ' + suAtsarga.toFixed(1) + ' l.';
+        document.getElementById("rezultatas").innerText =
+            "Reikės " + kiekis + " dėžių. Kaina: " + suma.toFixed(2) + " €";
+    }
 }
 
-function skaiciuotiGipsa() {
-    const plotas = parseFloat(document.getElementById('gip_plotas').value);
-    const plokste = parseFloat(document.getElementById('gip_plokste').value);
-    const atsarga = parseFloat(document.getElementById('gip_atsarga').value);
+function calcDazai() {
+    let plotas = parseFloat(document.getElementById("plotas").value);
+    let iseiga = parseFloat(document.getElementById("iseiga").value);
+    let kaina = parseFloat(document.getElementById("kaina").value);
 
-    const kiekis = plotas / plokste;
-    const suAtsarga = kiekis * (1 + atsarga / 100);
+    if (plotas > 0 && iseiga > 0 && kaina > 0) {
+        let litrai = plotas / iseiga;
+        let suma = litrai * kaina;
 
-    document.getElementById('gip_rez').innerText =
-        'Reikės plokščių: ' + Math.ceil(suAtsarga);
+        document.getElementById("rezultatas").innerText =
+            "Reikės " + litrai.toFixed(1) + " litrų. Kaina: " + suma.toFixed(2) + " €";
+    }
 }
 
-function skaiciuotiPlyteles() {
-    const plotas = parseFloat(document.getElementById('ply_plotas').value);
-    const ilgis = parseFloat(document.getElementById('ply_ilgis').value);
-    const plotis = parseFloat(document.getElementById('ply_plotis').value);
-    const atsarga = parseFloat(document.getElementById('ply_atsarga').value);
+function calcGipsas() {
+    let plotas = parseFloat(document.getElementById("plotas").value);
+    let lapas = parseFloat(document.getElementById("lapas").value);
+    let kaina = parseFloat(document.getElementById("kaina").value);
 
-    const dydis = (ilgis / 100) * (plotis / 100);
-    const kiekis = plotas / dydis;
-    const suAtsarga = kiekis * (1 + atsarga / 100);
+    if (plotas > 0 && lapas > 0 && kaina > 0) {
+        let kiekis = Math.ceil(plotas / lapas);
+        let suma = kiekis * kaina;
 
-    document.getElementById('ply_rez').innerText =
-        'Reikės plytelių: ' + Math.ceil(suAtsarga);
+        document.getElementById("rezultatas").innerText =
+            "Reikės " + kiekis + " lapų. Kaina: " + suma.toFixed(2) + " €";
+    }
 }
