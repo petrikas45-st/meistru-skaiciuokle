@@ -2,30 +2,187 @@
 <html lang="lt">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meistrų skaičiuoklės</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- SEO -->
+    <meta name="description" content="Profesionalios statybų skaičiuoklės: laminatas, plytelės, dažai, gipsas ir daugiau.">
+    <meta property="og:title" content="Meistrų skaičiuoklės">
+    <meta property="og:description" content="Statybų skaičiuoklių platforma meistrams ir klientams.">
+    <meta property="og:type" content="website">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #222;
+        }
+
+        /* ORANŽINIS BRANDO BLOKAS */
+        .brand-bar {
+            background: #FF7A00;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 48px;
+            height: 48px;
+            background: #fff;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #FF7A00;
+            font-size: 22px;
+        }
+
+        .brand-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        /* MĖLYNA NAVIGACIJA */
+        .nav-bar {
+            background: #0077FF;
+            padding: 10px 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-bar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .nav-bar a:hover {
+            opacity: 0.7;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background: #f7f7f7;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            border: 2px solid #eee;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            border-color: #0077FF;
+            transform: translateY(-3px);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #FF7A00;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+            .brand-title {
+                font-size: 18px;
+            }
+            .nav-bar {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Meistrų skaičiuoklės</h1>
-</header>
-
-<nav>
-    <a href="index.html">Pagrindinis</a>
-    <a href="laminatas.html">Laminatas</a>
-    <a href="plyteles.html">Plytelės</a>
-    <a href="dazai.html">Dažai</a>
-    <a href="gipsas.html">Gipsas</a>
-</nav>
-
-<div class="main">
-    <div class="card">
-        <h2>Pasirink skaičiuoklę</h2>
-        <p>Čia rasi laminato, plytelių, dažų ir gipskartonio skaičiuokles.</p>
+    <!-- ORANŽINIS BRANDO BLOKAS -->
+    <div class="brand-bar">
+        <div class="logo">▦</div>
+        <div class="brand-title">Meistrų skaičiuoklės</div>
     </div>
-</div>
 
-<script src="script.js"></script>
+    <!-- MĖLYNA NAVIGACIJA -->
+    <div class="nav-bar">
+        <a href="#">Pagrindinis</a>
+        <a href="#">Laminatas</a>
+        <a href="#">Plytelės</a>
+        <a href="#">Dažai</a>
+        <a href="#">Gipsas</a>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid">
+
+        <!-- REALIOS 4 SKAIČIUOKLĖS -->
+        <div class="card">
+            <div class="card-icon">📏</div>
+            Laminato skaičiuoklė
+        </div>
+
+        <div class="card">
+            <div class="card-icon">▦</div>
+            Plytelių skaičiuoklė
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🎨</div>
+            Dažų skaičiuoklė
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📐</div>
+            Gipskartonio skaičiuoklė
+        </div>
+
+        <!-- 4 TUŠČIOS KORTELĖS ATEIČIAI -->
+        <div class="card">
+            <div class="card-icon">🧱</div>
+            Grindjuostės (ateityje)
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📦</div>
+            Medžiagų kaina (ateityje)
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📏</div>
+            Sienų plotas (ateityje)
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🛠️</div>
+            Meistrų įrankiai (ateityje)
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 Meistrų skaičiuoklės – Statybų skaičiuoklių platforma
+    </footer>
+
 </body>
 </html>
