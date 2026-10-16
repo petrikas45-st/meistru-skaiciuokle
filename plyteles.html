@@ -4,34 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plytelių skaičiuoklė</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
 
-    <h1>Plytelių skaičiuoklė</h1>
+    <div class="header">Plytelių skaičiuoklė</div>
 
-    <div class="calc-box">
-        <label>Plotas (m²):</label>
-        <input type="number" id="plotas">
+    <div class="menu">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Pagrindinis</a>
+        <a href="laminatas.html"><i class="fa-solid fa-ruler-combined"></i> Laminatas</a>
+        <a href="plyteles.html"><i class="fa-solid fa-border-all"></i> Plytelės</a>
+        <a href="dazai.html"><i class="fa-solid fa-paint-roller"></i> Dažai</a>
+        <a href="gipsas.html"><i class="fa-solid fa-drafting-compass"></i> Gipsas</a>
+    </div>
 
-        <label>Plytelių kaina už m² (€):</label>
-        <input type="number" id="kaina">
+    <div class="calc">
+        <label>Grindų / sienos plotas (m²):</label>
+        <input id="plotas" type="number">
 
-        <button onclick="skaiciuoti()">Skaičiuoti</button>
+        <label>Dėžės dengiamas plotas (m²):</label>
+        <input id="deze" type="number">
+
+        <label>Dėžės kaina (€):</label>
+        <input id="kaina" type="number">
+
+        <button onclick="calcPlyteles()">Skaičiuoti</button>
 
         <p id="rezultatas"></p>
     </div>
-
-    <script>
-        function skaiciuoti() {
-            let plotas = Number(document.getElementById("plotas").value);
-            let kaina = Number(document.getElementById("kaina").value);
-            let suma = plotas * kaina;
-
-            document.getElementById("rezultatas").innerText =
-                "Bendra kaina: " + suma.toFixed(2) + " €";
-        }
-    </script>
 
 </body>
 </html>
