@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gipskartonio skaičiuoklė</title>
+    <title>Gipso skaičiuoklė</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-    <div class="header">Gipskartonio skaičiuoklė</div>
+    <div class="header">Gipso skaičiuoklė</div>
 
     <div class="menu">
         <a href="index.html"><i class="fa-solid fa-house"></i> Pagrindinis</a>
@@ -23,13 +23,15 @@
     </div>
 
     <div class="calc">
-        <label>Sienų / lubų plotas (m²):</label>
+        <h2>Gipso skaičiavimas</h2>
+
+        <label>Plotas (m²):</label>
         <input id="plotas" type="number">
 
-        <label>Vieno lapo dengiamas plotas (m²):</label>
+        <label>Lapo dydis (m²):</label>
         <input id="lapas" type="number">
 
-        <label>Lapo kaina (€):</label>
+        <label>Kaina už lapą (€):</label>
         <input id="kaina" type="number">
 
         <button onclick="calcGipsas()">Skaičiuoti</button>
@@ -37,12 +39,11 @@
         <p id="rezultatas"></p>
 
         <a class="buy-btn" href="https://www.varle.lt/?utm_source=meistru_skaiciuokle" target="_blank">
-            <i class="fa-solid fa-cart-shopping"></i> Pirkti medžiagas
+            <i class="fa-solid fa-cart-shopping"></i> Pirkti gipsą
         </a>
 
-        <!-- AUTOMATINĖ KLIENTŲ FORMA -->
         <div class="contact-form">
-            <h3>Greita užklausa</h3>
+            <h3>Greita užklausa meistrui</h3>
 
             <label>Vardas:</label>
             <input id="vardas" type="text">
@@ -57,9 +58,15 @@
 
             <p id="form-rez"></p>
         </div>
-        <!-- FORMOS PABAIGA -->
-
     </div>
+
+    <a href="https://wa.me/3706XXXXXXX" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <a href="https://m.me/TAVO_FACEBOOK_ID" class="messenger-float" target="_blank">
+        <i class="fa-brands fa-facebook-messenger"></i>
+    </a>
 
 </body>
 </html>
