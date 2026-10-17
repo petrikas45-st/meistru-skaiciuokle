@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -14,10 +15,74 @@
     <div class="header">Meistrų skaičiuoklės</div>
 
     <div class="menu">
-        <a href="laminatas.html"><i class="fa-solid fa-ruler-combined"></i> Laminato skaičiuoklė</a>
-        <a href="plyteles.html"><i class="fa-solid fa-border-all"></i> Plytelių skaičiuoklė</a>
-        <a href="dazai.html"><i class="fa-solid fa-paint-roller"></i> Dažų skaičiuoklė</a>
-        <a href="gipsas.html"><i class="fa-solid fa-drafting-compass"></i> Gipskartonio skaičiuoklė</a>
+        <a href="index.html"><i class="fa-solid fa-house"></i> Pagrindinis</a>
+        <a href="laminatas.html"><i class="fa-solid fa-ruler-combined"></i> Laminatas</a>
+        <a href="plyteles.html"><i class="fa-solid fa-border-all"></i> Plytelės</a>
+        <a href="dazai.html"><i class="fa-solid fa-paint-roller"></i> Dažai</a>
+        <a href="gipsas.html"><i class="fa-solid fa-drafting-compass"></i> Gipsas</a>
+    </div>
+
+    <div class="calc">
+        <h2 style="text-align:center; margin-top:0;">Greitos skaičiuoklės meistrams ir namams</h2>
+        <p>
+            Įvesk savo patalpos duomenis, sužinok kiek medžiagų reikia ir preliminarią kainą.
+            Jei nori, kad meistras viską padarytų už tave – palik kontaktus ir mes susisieksime.
+        </p>
+
+        <div style="display:flex; flex-wrap:wrap; gap:15px; margin-top:20px; justify-content:center;">
+            <a href="laminatas.html" class="card-link">
+                <div class="card">
+                    <i class="fa-solid fa-ruler-combined card-icon"></i>
+                    <h3>Laminatas</h3>
+                    <p>Paskaičiuok, kiek pakuočių laminato reikia kambariui.</p>
+                </div>
+            </a>
+
+            <a href="plyteles.html" class="card-link">
+                <div class="card">
+                    <i class="fa-solid fa-border-all card-icon"></i>
+                    <h3>Plytelės</h3>
+                    <p>Sužinok, kiek dėžių plytelių reikia grindims ar sienoms.</p>
+                </div>
+            </a>
+
+            <a href="dazai.html" class="card-link">
+                <div class="card">
+                    <i class="fa-solid fa-paint-roller card-icon"></i>
+                    <h3>Dažai</h3>
+                    <p>Apskaičiuok, kiek litrų dažų reikia sienoms ar luboms.</p>
+                </div>
+            </a>
+
+            <a href="gipsas.html" class="card-link">
+                <div class="card">
+                    <i class="fa-solid fa-drafting-compass card-icon"></i>
+                    <h3>Gipsas</h3>
+                    <p>Sužinok, kiek gipskartonio lapų reikia konstrukcijai.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="contact-form" style="margin-top:25px;">
+            <h3>Greita užklausa meistrui</h3>
+
+            <label>Vardas:</label>
+            <input id="vardas" type="text">
+
+            <label>Telefono numeris:</label>
+            <input id="tel" type="text">
+
+            <label>Ką reikia padaryti?</label>
+            <textarea id="uzklausa"></textarea>
+
+            <button onclick="siustiUzklausa()">Siųsti užklausą</button>
+
+            <p id="form-rez"></p>
+        </div>
+
+        <a class="buy-btn" href="https://www.varle.lt/?utm_source=meistru_skaiciuokle" target="_blank">
+            <i class="fa-solid fa-cart-shopping"></i> Pirkti medžiagas
+        </a>
     </div>
 
 </body>
