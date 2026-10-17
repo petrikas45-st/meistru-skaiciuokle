@@ -1,71 +1,86 @@
+// Laminatas
 function calcLaminatas() {
     let plotas = parseFloat(document.getElementById("plotas").value);
     let pakuote = parseFloat(document.getElementById("pakuote").value);
     let kaina = parseFloat(document.getElementById("kaina").value);
 
-    if (plotas > 0 && pakuote > 0 && kaina > 0) {
-        let kiekis = Math.ceil(plotas / pakuote);
-        let suma = kiekis * kaina;
-
-        document.getElementById("rezultatas").innerText =
-            "Reikės " + kiekis + " pakuočių. Kaina: " + suma.toFixed(2) + " €";
+    if (!plotas || !pakuote || !kaina) {
+        document.getElementById("rezultatas").innerHTML = "Įvesk visus duomenis.";
+        return;
     }
+
+    let kiekis = Math.ceil(plotas / pakuote);
+    let suma = kiekis * kaina;
+
+    document.getElementById("rezultatas").innerHTML =
+        "Reikės <b>" + kiekis + "</b> pakuočių. Kaina: <b>" + suma.toFixed(2) + " €</b>";
 }
 
+// Plytelės
 function calcPlyteles() {
     let plotas = parseFloat(document.getElementById("plotas").value);
     let deze = parseFloat(document.getElementById("deze").value);
     let kaina = parseFloat(document.getElementById("kaina").value);
 
-    if (plotas > 0 && deze > 0 && kaina > 0) {
-        let kiekis = Math.ceil(plotas / deze);
-        let suma = kiekis * kaina;
-
-        document.getElementById("rezultatas").innerText =
-            "Reikės " + kiekis + " dėžių. Kaina: " + suma.toFixed(2) + " €";
+    if (!plotas || !deze || !kaina) {
+        document.getElementById("rezultatas").innerHTML = "Įvesk visus duomenis.";
+        return;
     }
+
+    let kiekis = Math.ceil(plotas / deze);
+    let suma = kiekis * kaina;
+
+    document.getElementById("rezultatas").innerHTML =
+        "Reikės <b>" + kiekis + "</b> dėžių. Kaina: <b>" + suma.toFixed(2) + " €</b>";
 }
 
+// Dažai
 function calcDazai() {
     let plotas = parseFloat(document.getElementById("plotas").value);
     let iseiga = parseFloat(document.getElementById("iseiga").value);
     let kaina = parseFloat(document.getElementById("kaina").value);
 
-    if (plotas > 0 && iseiga > 0 && kaina > 0) {
-        let litrai = plotas / iseiga;
-        let suma = litrai * kaina;
-
-        document.getElementById("rezultatas").innerText =
-            "Reikės " + litrai.toFixed(1) + " litrų. Kaina: " + suma.toFixed(2) + " €";
+    if (!plotas || !iseiga || !kaina) {
+        document.getElementById("rezultatas").innerHTML = "Įvesk visus duomenis.";
+        return;
     }
+
+    let litrai = Math.ceil(plotas / iseiga);
+    let suma = litrai * kaina;
+
+    document.getElementById("rezultatas").innerHTML =
+        "Reikės <b>" + litrai + "</b> litrų. Kaina: <b>" + suma.toFixed(2) + " €</b>";
 }
 
+// Gipsas
 function calcGipsas() {
     let plotas = parseFloat(document.getElementById("plotas").value);
     let lapas = parseFloat(document.getElementById("lapas").value);
     let kaina = parseFloat(document.getElementById("kaina").value);
 
-    if (plotas > 0 && lapas > 0 && kaina > 0) {
-        let kiekis = Math.ceil(plotas / lapas);
-        let suma = kiekis * kaina;
-
-        document.getElementById("rezultatas").innerText =
-            "Reikės " + kiekis + " lapų. Kaina: " + suma.toFixed(2) + " €";
+    if (!plotas || !lapas || !kaina) {
+        document.getElementById("rezultatas").innerHTML = "Įvesk visus duomenis.";
+        return;
     }
+
+    let kiekis = Math.ceil(plotas / lapas);
+    let suma = kiekis * kaina;
+
+    document.getElementById("rezultatas").innerHTML =
+        "Reikės <b>" + kiekis + "</b> lapų. Kaina: <b>" + suma.toFixed(2) + " €</b>";
 }
 
-/* --- KLIENTŲ FORMOS FUNKCIJA --- */
-
+// Kontaktų forma
 function siustiUzklausa() {
     let vardas = document.getElementById("vardas").value;
     let tel = document.getElementById("tel").value;
     let uzklausa = document.getElementById("uzklausa").value;
 
-    if (vardas && tel && uzklausa) {
-        document.getElementById("form-rez").innerText =
-            "Ačiū! Susisieksime su jumis per 10–30 min.";
-    } else {
-        document.getElementById("form-rez").innerText =
-            "Užpildykite visus laukus.";
+    if (!vardas || !tel || !uzklausa) {
+        document.getElementById("form-rez").innerHTML = "Užpildyk visus laukus.";
+        return;
     }
+
+    document.getElementById("form-rez").innerHTML =
+        "Užklausa išsiųsta. Susisieksime.";
 }
