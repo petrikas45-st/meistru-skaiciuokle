@@ -1,116 +1,161 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meistrų skaičiuoklės</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skaičiuoklės – Meistrų Skaičiuoklės</title>
 
-    <!-- SEO -->
-    <meta name="description" content="Greitos meistrų skaičiuoklės: laminatas, plytelės, dažai, gipsas. Sužinok medžiagų kiekį ir kainą. Meistro paslaugos Vilniuje ir visoje Lietuvoje.">
-    <meta name="keywords" content="laminato skaičiuoklė, plytelių skaičiuoklė, dažų skaičiuoklė, gipskartonio skaičiuoklė, meistras Vilnius, remontas, statybos">
-    <meta name="author" content="Petras">
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1462567261580029"
-     crossorigin="anonymous"></script>
-    <!-- Ikonos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+/* HEADER */
+header {
+    background: #222;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
 
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+nav a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff7b00;
+    transform: translateY(-2px);
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* ICON */
+.icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #ff7b00;
+    transition: 0.3s;
+}
+
+.card:hover .icon {
+    color: #00aaff;
+    transform: scale(1.15);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+</style>
 </head>
 
 <body>
 
-    <div class="header">Meistrų skaičiuoklės</div>
+<header>
+    <!-- LOGOTIPAS -->
+    <svg width="180" height="40" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="10" width="60" height="60" rx="8" fill="#ff7b00"/>
+      <path d="M20 25 L40 25 L50 45 L10 45 Z" fill="white"/>
+      <text x="80" y="55" font-size="32" font-family="Arial" fill="#fff">Skaičiuoklės</text>
+    </svg>
 
-    <div class="menu">
-        <a href="index.html"><i class="fa-solid fa-house"></i> Pagrindinis</a>
-        <a href="laminatas.html"><i class="fa-solid fa-ruler-combined"></i> Laminatas</a>
-        <a href="plyteles.html"><i class="fa-solid fa-border-all"></i> Plytelės</a>
-        <a href="dazai.html"><i class="fa-solid fa-paint-roller"></i> Dažai</a>
-        <a href="gipsas.html"><i class="fa-solid fa-drafting-compass"></i> Gipsas</a>
+    <nav>
+        <a href="/">Pagrindinis</a>
+        <a href="/meistru-skaiciuokle/">Skaičiuoklės</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h2>Visos skaičiuoklės</h2>
+    <p>Pasirink norimą skaičiuoklę:</p>
+
+    <div class="grid">
+
+        <!-- Pavyzdinės kortelės (tu gali pridėti savo) -->
+        <div class="card" onclick="location.href='betonas.html'">
+            <div class="icon">🧱</div>
+            <h3>Betono skaičiuoklė</h3>
+            <p>Greitas betono kiekio paskaičiavimas.</p>
+        </div>
+
+        <div class="card" onclick="location.href='plytos.html'">
+            <div class="icon">🧱</div>
+            <h3>Plytų skaičiuoklė</h3>
+            <p>Plytų kiekio ir kainos skaičiavimas.</p>
+        </div>
+
+        <div class="card" onclick="location.href='sienos.html'">
+            <div class="icon">📏</div>
+            <h3>Sienų plotas</h3>
+            <p>Plotas, dažai, medžiagos.</p>
+        </div>
+
+        <div class="card" onclick="location.href='grindys.html'">
+            <div class="icon">🪵</div>
+            <h3>Grindų skaičiuoklė</h3>
+            <p>Grindų medžiagų kiekiai.</p>
+        </div>
+
+        <div class="card" onclick="location.href='stogas.html'">
+            <div class="icon">🏠</div>
+            <h3>Stogo skaičiuoklė</h3>
+            <p>Stogo plotas ir medžiagos.</p>
+        </div>
+
+        <div class="card" onclick="location.href='kaina.html'">
+            <div class="icon">💶</div>
+            <h3>Darbų kaina</h3>
+            <p>Greitas darbų kainos paskaičiavimas.</p>
+        </div>
+
     </div>
 
-    <div class="calc">
-        <h2 style="text-align:center; margin-top:0;">Greitos skaičiuoklės meistrams ir namams</h2>
-        <p>
-            Įvesk patalpos duomenis, sužinok kiek medžiagų reikia ir preliminarią kainą.
-            Jei nori, kad meistras viską padarytų už tave – palik kontaktus ir mes susisieksime.
-        </p>
-       <!-- REKLAMOS BLOKAS -->
-<div style="width:100%; text-align:center; margin:20px 0;">
-    <div id="reklama1" style="display:inline-block; width:300px; height:250px; background:#f0f0f0; border:1px solid #ccc;">
-        Reklama čia
-    </div>
 </div>
 
-        <div style="display:flex; flex-wrap:wrap; gap:15px; margin-top:20px; justify-content:center;">
-
-            <a href="laminatas.html" class="card-link">
-                <div class="card">
-                    <i class="fa-solid fa-ruler-combined card-icon"></i>
-                    <h3>Laminatas</h3>
-                    <p>Paskaičiuok, kiek pakuočių laminato reikia kambariui.</p>
-                </div>
-            </a>
-
-            <a href="plyteles.html" class="card-link">
-                <div class="card">
-                    <i class="fa-solid fa-border-all card-icon"></i>
-                    <h3>Plytelės</h3>
-                    <p>Sužinok, kiek dėžių plytelių reikia grindims ar sienoms.</p>
-                </div>
-            </a>
-
-            <a href="dazai.html" class="card-link">
-                <div class="card">
-                    <i class="fa-solid fa-paint-roller card-icon"></i>
-                    <h3>Dažai</h3>
-                    <p>Apskaičiuok, kiek litrų dažų reikia sienoms ar luboms.</p>
-                </div>
-            </a>
-
-            <a href="gipsas.html" class="card-link">
-                <div class="card">
-                    <i class="fa-solid fa-drafting-compass card-icon"></i>
-                    <h3>Gipsas</h3>
-                    <p>Sužinok, kiek gipskartonio lapų reikia konstrukcijai.</p>
-                </div>
-            </a>
-
-        </div>
-
-        <div class="contact-form" style="margin-top:25px;">
-            <h3>Greita užklausa meistrui</h3>
-
-            <label>Vardas:</label>
-            <input id="vardas" type="text">
-
-            <label>Telefono numeris:</label>
-            <input id="tel" type="text">
-
-            <label>Ką reikia padaryti?</label>
-            <textarea id="uzklausa"></textarea>
-
-            <button onclick="siustiUzklausa()">Siųsti užklausą</button>
-
-            <p id="form-rez"></p>
-        </div>
-
-        <a class="buy-btn" href="https://www.varle.lt/?utm_source=meistru_skaiciuokle" target="_blank">
-            <i class="fa-solid fa-cart-shopping"></i> Pirkti medžiagas
-        </a>
-    </div>
-
-    <!-- WhatsApp -->
-    <a href="https://wa.me/37060851345" class="whatsapp-float" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <!-- Messenger -->
-    <a href="https://m.me/TAVO_FACEBOOK_ID" class="messenger-float" target="_blank">
-        <i class="fa-brands fa-facebook-messenger"></i>
-    </a>
+<footer>
+    © 2026 Meistrų Skaičiuoklės – Petras
+</footer>
 
 </body>
 </html>
