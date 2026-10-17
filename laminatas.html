@@ -6,8 +6,8 @@
     <title>Laminato skaičiuoklė</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -23,13 +23,15 @@
     </div>
 
     <div class="calc">
-        <label>Kambario plotas (m²):</label>
+        <h2>Laminato skaičiavimas</h2>
+
+        <label>Plotas (m²):</label>
         <input id="plotas" type="number">
 
-        <label>Pakuotės plotas (m²):</label>
+        <label>Pakuotės dydis (m²):</label>
         <input id="pakuote" type="number">
 
-        <label>Pakuotės kaina (€):</label>
+        <label>Kaina už pakuotę (€):</label>
         <input id="kaina" type="number">
 
         <button onclick="calcLaminatas()">Skaičiuoti</button>
@@ -37,12 +39,11 @@
         <p id="rezultatas"></p>
 
         <a class="buy-btn" href="https://www.varle.lt/?utm_source=meistru_skaiciuokle" target="_blank">
-            <i class="fa-solid fa-cart-shopping"></i> Pirkti medžiagas
+            <i class="fa-solid fa-cart-shopping"></i> Pirkti laminatą
         </a>
 
-        <!-- AUTOMATINĖ KLIENTŲ FORMA -->
         <div class="contact-form">
-            <h3>Greita užklausa</h3>
+            <h3>Greita užklausa meistrui</h3>
 
             <label>Vardas:</label>
             <input id="vardas" type="text">
@@ -57,9 +58,17 @@
 
             <p id="form-rez"></p>
         </div>
-        <!-- FORMOS PABAIGA -->
-
     </div>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/3706XXXXXXX" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Messenger -->
+    <a href="https://m.me/TAVO_FACEBOOK_ID" class="messenger-float" target="_blank">
+        <i class="fa-brands fa-facebook-messenger"></i>
+    </a>
 
 </body>
 </html>
