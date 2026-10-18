@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telefonų kainų palyginimas – Meistrų Skaičiuoklės</title>
+
+<style>
+body { margin:0; font-family:Arial; background:#f4f4f4; color:#222; }
+header { background:#222; padding:15px 20px; display:flex; align-items:center; gap:20px; color:white; box-shadow:0 3px 10px rgba(0,0,0,0.3); }
+nav a { color:white; margin-right:20px; text-decoration:none; font-size:18px; transition:0.3s; }
+nav a:hover { color:#ff7b00; transform:translateY(-2px); }
+.container { max-width:1000px; margin:auto; padding:20px; }
+.card { background:white; padding:25px; margin-bottom:25px; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,0.1); transition:0.3s; }
+.card:hover { transform:translateY(-6px); box-shadow:0 6px 18px rgba(0,0,0,0.2); }
+input { width:100%; padding:12px; margin-top:10px; border-radius:6px; border:1px solid #ccc; font-size:16px; }
+.table { width:100%; border-collapse:collapse; margin-top:15px; }
+.table th, .table td { padding:10px; border-bottom:1px solid #ddd; text-align:left; }
+.table th { background:#fafafa; }
+.link-btn { color:#ff7b00; text-decoration:none; font-weight:bold; }
+.link-btn:hover { text-decoration:underline; }
+footer { text-align:center; padding:20px; color:#777; }
+</style>
+</head>
+
+<body>
+
+<header>
+    <svg width="200" height="40">
+        <rect x="0" y="10" width="60" height="60" rx="8" fill="#ff7b00"/>
+        <path d="M20 25 L40 25 L50 45 L10 45 Z" fill="white"/>
+        <text x="80" y="55" font-size="28" fill="#fff">Telefonai</text>
+    </svg>
+
+    <nav>
+        <a href="/">Pagrindinis</a>
+        <a href="/meistru-skaiciuokle/">Skaičiuoklės</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Telefonų kainų palyginimas</h2>
+        <p>Įvesk modelį (pvz. „Samsung S26 Ultra“, „iPhone 16 Pro“, „Xiaomi 14“) ir atsidaryk kainas skirtingose parduotuvėse.</p>
+
+        <label>Telefono modelis</label>
+        <input id="modelis" type="text" placeholder="Pvz.: Samsung S26 Ultra, iPhone 16 Pro, Xiaomi 14">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Parduotuvė</th>
+                    <th>Nuoroda</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Varle</td>
+                    <td><a class="link-btn" target="_blank" id="varle-link">Atidaryti</a></td>
+                </tr>
+                <tr>
+                    <td>Topo Centras</td>
+                    <td><a class="link-btn" target="_blank" id="topo-link">Atidaryti</a></td>
+                </tr>
+                <tr>
+                    <td>Telia</td>
+                    <td><a class="link-btn" target="_blank" id="telia-link">Atidaryti</a></td>
+                </tr>
+                <tr>
+                    <td>Bitė</td>
+                    <td><a class="link-btn" target="_blank" id="bite-link">Atidaryti</a></td>
+                </tr>
+                <tr>
+                    <td>Senukai (telefonai)</td>
+                    <td><a class="link-btn" target="_blank" id="senukai-link">Atidaryti</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>Populiariausi telefonai 2026</h2>
+        <ul style="line-height:1.8;">
+            <li>📱 Samsung S26 Ultra</li>
+            <li>📱 iPhone 16 Pro Max</li>
+            <li>📱 Xiaomi 14 Ultra</li>
+            <li>📱 Google Pixel 9 Pro</li>
+            <li>📱 OnePlus 13</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Rekomendacijos pagal poreikį</h2>
+        <ul style="line-height:1.8;">
+            <li>📸 Geriausia kamera – Samsung S26 Ultra / Xiaomi 14 Ultra</li>
+            <li>🔋 Baterija – Asus ROG Phone / Xiaomi Redmi Note serija</li>
+            <li>🎮 Žaidimams – iPhone 16 Pro / ROG Phone</li>
+            <li>💼 Darbui – iPhone 16 Pro Max / Samsung S26 Ultra</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>SEO informacija</h2>
+        <p>
+            Telefonų kainų palyginimas Lietuvoje leidžia greitai rasti geriausias kainas iš Varle, Topo Centras, Telia, Bitė ir Senukai parduotuvių.
+            Čia galite palyginti flagmanus, vidutinės klasės telefonus ir pigesnius modelius.
+        </p>
+    </div>
+
+</div>
+
+<footer>© 2026 Meistrų Skaičiuoklės – Petras</footer>
+
+<script>
+function encode(q){ return encodeURIComponent(q.trim()); }
+
+function updateLinks() {
+    const q = document.getElementById('modelis').value;
+    const e = encode(q || '');
+    document.getElementById('varle-link').href   = 'https://www.varle.lt/paieska/?q=' + e;
+    document.getElementById('topo-link').href    = 'https://www.topocentras.lt/search?q=' + e;
+    document.getElementById('telia-link').href   = 'https://www.telia.lt/prekes/paieska?q=' + e;
+    document.getElementById('bite-link').href    = 'https://www.bite.lt/telefonai?q=' + e;
+    document.getElementById('senukai-link').href = 'https://www.senukai.lt/search?q=' + e;
+}
+
+document.getElementById('modelis').addEventListener('input', updateLinks);
+updateLinks();
+</script>
+
+</body>
+</html>
