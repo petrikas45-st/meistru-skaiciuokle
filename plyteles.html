@@ -1,73 +1,72 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plytelių skaičiuoklė</title>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1462567261580029"
-     crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plytelių skaičiuoklė – Meistrų Skaičiuoklės</title>
+
+<style>
+body { margin:0; font-family:Arial; background:#f4f4f4; color:#222; }
+header { background:#222; padding:15px 20px; display:flex; align-items:center; gap:20px; color:white; box-shadow:0 3px 10px rgba(0,0,0,0.3); }
+nav a { color:white; margin-right:20px; text-decoration:none; font-size:18px; transition:0.3s; }
+nav a:hover { color:#ff7b00; transform:translateY(-2px); }
+.container { max-width:900px; margin:auto; padding:20px; }
+.card { background:white; padding:25px; margin-bottom:25px; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,0.1); transition:0.3s; }
+.card:hover { transform:translateY(-6px); box-shadow:0 6px 18px rgba(0,0,0,0.2); }
+input { width:100%; padding:12px; margin-top:10px; border-radius:6px; border:1px solid #ccc; font-size:16px; }
+.button { display:inline-block; padding:12px 18px; background:#ff7b00; color:white; text-decoration:none; border-radius:6px; margin-top:10px; transition:0.3s; }
+.button:hover { background:#e56f00; transform:scale(1.05); }
+.store-list a { display:block; padding:12px; background:#fff; margin:10px 0; border-radius:8px; text-decoration:none; color:#222; box-shadow:0 2px 6px rgba(0,0,0,0.1); transition:0.3s; }
+.store-list a:hover { background:#ff7b00; color:white; transform:translateY(-3px); }
+footer { text-align:center; padding:20px; color:#777; }
+</style>
+
+<script>
+function skaiciuoti() {
+    let plotas = parseFloat(document.getElementById("plotas").value);
+    let deze = 1.44; // 1 dėžė plytelių dengia 1.44m²
+    if (!plotas) { alert("Įvesk grindų plotą!"); return; }
+    let kiekis = plotas / deze;
+    document.getElementById("rezultatas").innerText = "Reikia dėžių: " + Math.ceil(kiekis);
+}
+</script>
 </head>
 
 <body>
 
-    <div class="header">Plytelių skaičiuoklė</div>
+<header>
+    <svg width="180" height="40"><rect x="0" y="10" width="60" height="60" rx="8" fill="#ff7b00"/><path d="M20 25 L40 25 L50 45 L10 45 Z" fill="white"/><text x="80" y="55" font-size="32" fill="#fff">Plytelės</text></svg>
+    <nav>
+        <a href="/">Pagrindinis</a>
+        <a href="/meistru-skaiciuokle/">Skaičiuoklės</a>
+    </nav>
+</header>
 
-    <div class="menu">
-        <a href="index.html"><i class="fa-solid fa-house"></i> Pagrindinis</a>
-        <a href="laminatas.html"><i class="fa-solid fa-ruler-combined"></i> Laminatas</a>
-        <a href="plyteles.html"><i class="fa-solid fa-border-all"></i> Plytelės</a>
-        <a href="dazai.html"><i class="fa-solid fa-paint-roller"></i> Dažai</a>
-        <a href="gipsas.html"><i class="fa-solid fa-drafting-compass"></i> Gipsas</a>
+<div class="container">
+
+    <div class="card">
+        <h2>Plytelių skaičiuoklė</h2>
+        <label>Plotas (m²)</label>
+        <input id="plotas" type="number" step="0.01">
+        <a class="button" onclick="skaiciuoti()">Skaičiuoti</a>
+        <h3 id="rezultatas" style="margin-top:20px;"></h3>
     </div>
 
-    <div class="calc">
-        <h2>Plytelių skaičiavimas</h2>
+    <div class="card">
+        <h2>Kur pirkti plyteles?</h2>
+        <p>Statybinių medžiagų parduotuvės:</p>
 
-        <label>Plotas (m²):</label>
-        <input id="plotas" type="number">
-
-        <label>Dėžės dengiamas plotas (m²):</label>
-        <input id="deze" type="number">
-
-        <label>Kaina už dėžę (€):</label>
-        <input id="kaina" type="number">
-
-        <button onclick="calcPlyteles()">Skaičiuoti</button>
-
-        <p id="rezultatas"></p>
-
-        <a class="buy-btn" href="https://www.varle.lt/?utm_source=meistru_skaiciuokle" target="_blank">
-            <i class="fa-solid fa-cart-shopping"></i> Pirkti plyteles
-        </a>
-
-        <div class="contact-form">
-            <h3>Greita užklausa meistrui</h3>
-
-            <label>Vardas:</label>
-            <input id="vardas" type="text">
-
-            <label>Telefono numeris:</label>
-            <input id="tel" type="text">
-
-            <label>Ką reikia padaryti?</label>
-            <textarea id="uzklausa"></textarea>
-
-            <button onclick="siustiUzklausa()">Siųsti užklausą</button>
-
-            <p id="form-rez"></p>
+        <div class="store-list">
+            <a href="https://www.senukai.lt" target="_blank">Senukai</a>
+            <a href="https://www.ermitazas.lt" target="_blank">Ermitazas</a>
+            <a href="https://www.mokivezi.lt" target="_blank">Moki-Veži</a>
+            <a href="https://www.bauhaus.lt" target="_blank">Bauhaus</a>
+            <a href="https://www.k-rauta.lt" target="_blank">K-Rauta</a>
         </div>
     </div>
 
-    <a href="https://wa.me/3706XXXXXXX" class="whatsapp-float" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+</div>
 
-    <a href="https://m.me/TAVO_FACEBOOK_ID" class="messenger-float" target="_blank">
-        <i class="fa-brands fa-facebook-messenger"></i>
-    </a>
-
+<footer>© 2026 Meistrų Skaičiuoklės – Petras</footer>
 </body>
 </html>
