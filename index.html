@@ -1,161 +1,27 @@
-<!DOCTYPE html>
-<html lang="lt">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skaičiuoklės – Meistrų Skaičiuoklės</title>
+<div class="grid">
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    color: #222;
-}
+    <div class="card" onclick="location.href='dazai.html'">
+        <div class="icon">🎨</div>
+        <h3>Dažai</h3>
+        <p>Sienų ir lubų dažų skaičiavimas.</p>
+    </div>
 
-/* HEADER */
-header {
-    background: #222;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    color: white;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-}
+    <div class="card" onclick="location.href='gipsas.html'">
+        <div class="icon">📐</div>
+        <h3>Gipsas</h3>
+        <p>GKP lapų kiekio skaičiavimas.</p>
+    </div>
 
-nav a {
-    color: white;
-    margin-right: 20px;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s;
-}
+    <div class="card" onclick="location.href='laminatas.html'">
+        <div class="icon">🪵</div>
+        <h3>Laminatas</h3>
+        <p>Pakuočių kiekio skaičiavimas.</p>
+    </div>
 
-nav a:hover {
-    color: #ff7b00;
-    transform: translateY(-2px);
-}
-
-/* CONTAINER */
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-}
-
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 20px;
-}
-
-/* CARD */
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    text-align: center;
-    cursor: pointer;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-}
-
-/* ICON */
-.icon {
-    font-size: 50px;
-    margin-bottom: 15px;
-    color: #ff7b00;
-    transition: 0.3s;
-}
-
-.card:hover .icon {
-    color: #00aaff;
-    transform: scale(1.15);
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #777;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <!-- LOGOTIPAS -->
-    <svg width="180" height="40" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="10" width="60" height="60" rx="8" fill="#ff7b00"/>
-      <path d="M20 25 L40 25 L50 45 L10 45 Z" fill="white"/>
-      <text x="80" y="55" font-size="32" font-family="Arial" fill="#fff">Skaičiuoklės</text>
-    </svg>
-
-    <nav>
-        <a href="/">Pagrindinis</a>
-        <a href="/meistru-skaiciuokle/">Skaičiuoklės</a>
-    </nav>
-</header>
-
-<div class="container">
-
-    <h2>Visos skaičiuoklės</h2>
-    <p>Pasirink norimą skaičiuoklę:</p>
-
-    <div class="grid">
-
-        <!-- Pavyzdinės kortelės (tu gali pridėti savo) -->
-        <div class="card" onclick="location.href='betonas.html'">
-            <div class="icon">🧱</div>
-            <h3>Betono skaičiuoklė</h3>
-            <p>Greitas betono kiekio paskaičiavimas.</p>
-        </div>
-
-        <div class="card" onclick="location.href='plytos.html'">
-            <div class="icon">🧱</div>
-            <h3>Plytų skaičiuoklė</h3>
-            <p>Plytų kiekio ir kainos skaičiavimas.</p>
-        </div>
-
-        <div class="card" onclick="location.href='sienos.html'">
-            <div class="icon">📏</div>
-            <h3>Sienų plotas</h3>
-            <p>Plotas, dažai, medžiagos.</p>
-        </div>
-
-        <div class="card" onclick="location.href='grindys.html'">
-            <div class="icon">🪵</div>
-            <h3>Grindų skaičiuoklė</h3>
-            <p>Grindų medžiagų kiekiai.</p>
-        </div>
-
-        <div class="card" onclick="location.href='stogas.html'">
-            <div class="icon">🏠</div>
-            <h3>Stogo skaičiuoklė</h3>
-            <p>Stogo plotas ir medžiagos.</p>
-        </div>
-
-        <div class="card" onclick="location.href='kaina.html'">
-            <div class="icon">💶</div>
-            <h3>Darbų kaina</h3>
-            <p>Greitas darbų kainos paskaičiavimas.</p>
-        </div>
-
+    <div class="card" onclick="location.href='plyteles.html'">
+        <div class="icon">🧱</div>
+        <h3>Plytelės</h3>
+        <p>Dėžių kiekio skaičiavimas.</p>
     </div>
 
 </div>
-
-<footer>
-    © 2026 Meistrų Skaičiuoklės – Petras
-</footer>
-
-</body>
-</html>
