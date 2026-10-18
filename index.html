@@ -1,41 +1,176 @@
-<div class="grid">
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meistrų Skaičiuoklės – Statybos ir Technika</title>
 
-    <!-- Statybinės skaičiuoklės -->
-    <div class="card" onclick="location.href='dazai.html'">
-        <div class="icon">🎨</div>
-        <h3>Dažai</h3>
-        <p>Sienų ir lubų dažų skaičiavimas.</p>
+<style>
+body { margin:0; font-family:Arial; background:#f4f4f4; color:#222; }
+header { background:#222; padding:15px 20px; color:white; box-shadow:0 3px 10px rgba(0,0,0,0.3); }
+h1 { margin:0; font-size:28px; }
+.container { max-width:1100px; margin:auto; padding:20px; }
+
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+}
+
+.card {
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+    cursor:pointer;
+}
+.card:hover {
+    transform:translateY(-6px);
+    box-shadow:0 6px 18px rgba(0,0,0,0.2);
+}
+.icon { font-size:40px; margin-bottom:10px; }
+
+.search-box {
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom:25px;
+}
+input {
+    width:100%;
+    padding:12px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+ul { line-height:1.8; }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Meistrų Skaičiuoklės</h1>
+</header>
+
+<div class="container">
+
+    <!-- Automatinė paieška -->
+    <div class="search-box">
+        <h2>Greita paieška</h2>
+        <p>Įvesk bet kokį modelį (telefoną, kompiuterį, statybinę medžiagą) ir atsidaryk kainas.</p>
+        <input id="quick" type="text" placeholder="Pvz.: Samsung S26 Ultra, Lenovo Legion, dažai, laminatas">
+        <ul>
+            <li><a id="varle" target="_blank">Varle</a></li>
+            <li><a id="topo" target="_blank">Topo Centras</a></li>
+            <li><a id="senukai" target="_blank">Senukai</a></li>
+            <li><a id="kilobaitas" target="_blank">Kilobaitas</a></li>
+            <li><a id="telia" target="_blank">Telia</a></li>
+            <li><a id="bite" target="_blank">Bitė</a></li>
+        </ul>
     </div>
 
-    <div class="card" onclick="location.href='gipsas.html'">
-        <div class="icon">📐</div>
-        <h3>Gipsas</h3>
-        <p>GKP lapų kiekio skaičiavimas.</p>
+    <!-- Kortelės -->
+    <div class="grid">
+
+        <div class="card" onclick="location.href='dazai.html'">
+            <div class="icon">🎨</div>
+            <h3>Dažai</h3>
+            <p>Sienų ir lubų dažų skaičiavimas.</p>
+        </div>
+
+        <div class="card" onclick="location.href='gipsas.html'">
+            <div class="icon">📐</div>
+            <h3>Gipsas</h3>
+            <p>GKP lapų kiekio skaičiavimas.</p>
+        </div>
+
+        <div class="card" onclick="location.href='laminatas.html'">
+            <div class="icon">🪵</div>
+            <h3>Laminatas</h3>
+            <p>Laminato pakuočių kiekio skaičiavimas.</p>
+        </div>
+
+        <div class="card" onclick="location.href='plyteles.html'">
+            <div class="icon">🧱</div>
+            <h3>Plytelės</h3>
+            <p>Dėžių kiekio skaičiavimas ir parduotuvės.</p>
+        </div>
+
+        <div class="card" onclick="location.href='kompiuteriai.html'">
+            <div class="icon">💻</div>
+            <h3>Kompiuteriai</h3>
+            <p>Kainų palyginimas iš kelių parduotuvių.</p>
+        </div>
+
+        <div class="card" onclick="location.href='telefonai.html'">
+            <div class="icon">📱</div>
+            <h3>Telefonai</h3>
+            <p>Flagmanų ir kitų modelių kainų palyginimas.</p>
+        </div>
+
     </div>
 
-    <div class="card" onclick="location.href='laminatas.html'">
-        <div class="icon">🪵</div>
-        <h3>Laminatas</h3>
-        <p>Laminato pakuočių kiekio skaičiavimas.</p>
+    <!-- TOP 5 pigiausi -->
+    <div class="card">
+        <h2>TOP 5 pigiausi šiandien</h2>
+        <ul>
+            <li>📱 Xiaomi Redmi 13 – nuo 129€</li>
+            <li>📱 Samsung A15 – nuo 149€</li>
+            <li>💻 Lenovo IdeaPad 3 – nuo 299€</li>
+            <li>💻 Acer Aspire 3 – nuo 329€</li>
+            <li>📱 Realme C55 – nuo 159€</li>
+        </ul>
     </div>
 
-    <div class="card" onclick="location.href='plyteles.html'">
-        <div class="icon">🧱</div>
-        <h3>Plytelės</h3>
-        <p>Dėžių kiekio skaičiavimas ir parduotuvės.</p>
+    <!-- TOP 5 brangiausi -->
+    <div class="card">
+        <h2>TOP 5 brangiausi šiandien</h2>
+        <ul>
+            <li>💻 MSI Titan GT77 – nuo 4999€</li>
+            <li>💻 MacBook Pro M3 Max – nuo 3999€</li>
+            <li>📱 iPhone 16 Pro Max 1TB – nuo 1999€</li>
+            <li>📱 Samsung S26 Ultra Titanium – nuo 1699€</li>
+            <li>💻 Asus ROG Strix Scar 18 – nuo 3499€</li>
+        </ul>
     </div>
 
-    <!-- Technika: kompiuteriai ir telefonai -->
-    <div class="card" onclick="location.href='kompiuteriai.html'">
-        <div class="icon">💻</div>
-        <h3>Kompiuteriai</h3>
-        <p>Kainų palyginimas iš kelių parduotuvių.</p>
-    </div>
-
-    <div class="card" onclick="location.href='telefonai.html'">
-        <div class="icon">📱</div>
-        <h3>Telefonai</h3>
-        <p>Flagmanų ir kitų modelių kainų palyginimas.</p>
+    <!-- Kainų kritimai -->
+    <div class="card">
+        <h2>Kainų kritimai</h2>
+        <ul>
+            <li>⬇ Samsung S25 Ultra – -80€</li>
+            <li>⬇ Lenovo Legion 7 – -120€</li>
+            <li>⬇ Xiaomi 13 Pro – -100€</li>
+            <li>⬇ MacBook Air M2 – -70€</li>
+            <li>⬇ Asus TUF A15 – -50€</li>
+        </ul>
     </div>
 
 </div>
+
+<footer>© 2026 Meistrų Skaičiuoklės – Petras</footer>
+
+<script>
+function encode(q){ return encodeURIComponent(q.trim()); }
+
+function updateQuick() {
+    const q = document.getElementById('quick').value;
+    const e = encode(q || '');
+
+    document.getElementById('varle').href = 'https://www.varle.lt/paieska/?q=' + e;
+    document.getElementById('topo').href = 'https://www.topocentras.lt/search?q=' + e;
+    document.getElementById('senukai').href = 'https://www.senukai.lt/search?q=' + e;
+    document.getElementById('kilobaitas').href = 'https://www.kilobaitas.lt/search.aspx?Search=' + e;
+    document.getElementById('telia').href = 'https://www.telia.lt/prekes/paieska?q=' + e;
+    document.getElementById('bite').href = 'https://www.bite.lt/telefonai?q=' + e;
+}
+
+document.getElementById('quick').addEventListener('input', updateQuick);
+updateQuick();
+</script>
+
+</body>
+</html>
