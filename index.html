@@ -69,12 +69,13 @@ ul { line-height:1.8; }
             <li><a id="kilobaitas" target="_blank">Kilobaitas</a></li>
             <li><a id="telia" target="_blank">Telia</a></li>
             <li><a id="bite" target="_blank">Bitė</a></li>
-         <li><a id="elektromarkt" target="_blank">Elektromarkt</a></li>
-<li><a id="avitela" target="_blank">Avitela</a></li>
-<li><a id="skytech" target="_blank">Skytech</a></li>
-<li><a id="mobililinija" target="_blank">Mobili linija</a></li>
-<li><a id="smartdeal" target="_blank">SmartDeal</a></li>
-  
+
+            <!-- Naujos parduotuvės -->
+            <li><a id="elektromarkt" target="_blank">Elektromarkt</a></li>
+            <li><a id="avitela" target="_blank">Avitela</a></li>
+            <li><a id="skytech" target="_blank">Skytech</a></li>
+            <li><a id="mobililinija" target="_blank">Mobili linija</a></li>
+            <li><a id="smartdeal" target="_blank">SmartDeal</a></li>
         </ul>
     </div>
 
@@ -172,6 +173,13 @@ function updateQuick() {
     document.getElementById('kilobaitas').href = 'https://www.kilobaitas.lt/search.aspx?Search=' + e;
     document.getElementById('telia').href = 'https://www.telia.lt/prekes/paieska?q=' + e;
     document.getElementById('bite').href = 'https://www.bite.lt/telefonai?q=' + e;
+
+    // Naujos parduotuvės
+    document.getElementById('elektromarkt').href = 'https://www.elektromarkt.lt/search?q=' + e;
+    document.getElementById('avitela').href = 'https://avitela.lt/paieska?q=' + e;
+    document.getElementById('skytech').href = 'https://www.skytech.lt/search/?q=' + e;
+    document.getElementById('mobililinija').href = 'https://mobililinija.lt/paieska?q=' + e;
+    document.getElementById('smartdeal').href = 'https://smartdeal.lt/search?q=' + e;
 }
 
 document.getElementById('quick').addEventListener('input', updateQuick);
