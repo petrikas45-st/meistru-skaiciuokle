@@ -84,3 +84,6 @@ function siustiUzklausa() {
     document.getElementById("form-rez").innerHTML =
         "Užklausa išsiųsta. Susisieksime.";
 }
+onclick="gtag('event','affiliate_click',{
+'partner':'varle'
+});"
